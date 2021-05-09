@@ -1,13 +1,19 @@
 import React from "react";
 
 import PageBackground from "./components/PageBackground";
+import Page from "./components/Page";
+import NavBar from "./components/NavBar";
 
 const img =
-  "https://cdn11.bigcommerce.com/s-ed393/images/stencil/1280x1280/products/10942/13808/plain_20_helium_balloons__52132.1518656035.jpg?c=2";
+  "https://iconarchive.com/download/i85353/graphicloads/android-settings/plus.ico";
 
 const App: React.FC<{}> = () => (
   <PageBackground img={img}>
-    <span>Hello</span>
+    <Page>
+      <NavBar>
+        <span>Hello</span>
+      </NavBar>
+    </Page>
   </PageBackground>
 );
 

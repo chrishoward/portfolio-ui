@@ -1,0 +1,14 @@
+.Page__container {
+  background-color: white;
+}
+
+.Page__container--fixed-width {
+  width: 1000px;
+  max-width: 100%;
+}
+
+@media (min-width: 960px) {
+  .Page__container--margin-top-bottom {
+    margin: 30px 0px;
+  }
+}
