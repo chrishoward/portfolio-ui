@@ -1,0 +1,8 @@
+.Toolbar {
+  display: flex;
+  max-width: 100%;
+}
+
+.Toolbar--height-100pc {
+  height: 100%;
+}

@@ -1,0 +1,12 @@
+.AppBar {
+  position: sticky;
+  top: 0px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.AppBar--dark-green {
+  background-color: #398400;
+}

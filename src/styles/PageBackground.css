@@ -1,6 +1,10 @@
-.PageBackground__container {
-  width: 100vw;
-  height: 100vh;
+.PageBackground {
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
+}
+
+.PageBackground--green {
+  background-color: #b5d58a;
 }

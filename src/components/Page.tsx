@@ -1,23 +1,27 @@
-import React, { ReactElement } from "react";
+import React, { ReactNode } from "react";
 import classNames from "classnames";
 
 import "../styles/Page.css";
 
 interface Props {
-  width?: string;
+  fixedWidth?: boolean;
   marginTopBottom?: boolean;
-  children: ReactElement | null;
+  dropShadow?: boolean;
+  children: ReactNode;
 }
 
 const Page: React.FC<Props> = ({
-  width = "fixed",
-  marginTopBottom = true,
+  fixedWidth = false,
+  marginTopBottom = false,
+  dropShadow = false,
   children,
 }) => {
   const classes = classNames({
-    Page__container: true,
-    "Page__container--fixed-width": width === "fixed",
-    "Page__container--margin-top-bottom": marginTopBottom,
+    Page: true,
+    "Page--full-width": !fixedWidth,
+    "Page--fixed-width": fixedWidth,
+    "Page--margin-top-bottom": marginTopBottom,
+    "Page--drop-shadow": dropShadow,
   });
   return <div className={classes}>{children}</div>;
 };

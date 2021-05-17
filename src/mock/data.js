@@ -1,4 +1,4 @@
-const aboutMe = {
+export const aboutMe = {
   img: "https://avatars2.githubusercontent.com/u/23305394?s=460&v=4",
   url: "https://www.linkedin.com/in/christopher-howard-au",
   blurb: {
@@ -7,75 +7,72 @@ const aboutMe = {
     Hobbies:
       "Developing, mountain biking, surfing, soccer, online gaming, fishing.",
     Goals:
-      "Work hard and expand on my software knowledge and skills as quickly as possible."
-  }
+      "Work hard and expand on my software knowledge and skills as quickly as possible.",
+  },
 };
 
-const community = [
+export const community = [
   {
     meetup: "ReactBris",
-    img:
-      "https://secure.meetupstatic.com/photos/event/1/e/5/2/600_478867762.jpeg",
+    img: "https://secure.meetupstatic.com/photos/event/1/e/5/2/600_478867762.jpeg",
     url: "https://www.meetup.com/reactbris/",
-    title: "React Brisbane"
+    title: "React Brisbane",
   },
   {
     meetup: "BrisJS",
-    img:
-      "https://secure.meetupstatic.com/photos/event/b/8/0/1/600_15527105.jpeg",
+    img: "https://secure.meetupstatic.com/photos/event/b/8/0/1/600_15527105.jpeg",
     url: "https://www.meetup.com/BrisJS/",
-    title: "Brisbane JavaScript"
+    title: "Brisbane JavaScript",
   },
   {
     meetup: "Node Brisbane",
-    img:
-      "https://secure.meetupstatic.com/photos/event/b/4/b/7/600_479626263.jpeg",
+    img: "https://secure.meetupstatic.com/photos/event/b/4/b/7/600_479626263.jpeg",
     url: "https://www.meetup.com/Node-Brisbane/",
-    title: "Node Brisbane"
-  }
-];
-
-const education = [
-  {
-    title: "Self Taught",
-    avatarIcon: "selfstudy",
-    blurbComponent: <BlurbSelfTaught />,
-    blurb:
-      "I am self taught bla bla bla I am self taught bla bla bla I am self taught bla bla bla"
+    title: "Node Brisbane",
   },
-  {
-    title: "Bach. of Mechanical Engineering",
-    avatarIcon: "qut",
-    blurb: <BlurbSelfTaught />
-  }
 ];
 
-const experience = [
-  {
-    title: "Self Taught1",
-    avatarIcon: "react",
-    blurb: <BlurbSelfTaught />
-  },
-  {
-    title: "Self Taught2",
-    avatarIcon: "react",
-    blurb: <BlurbSelfTaught />
-  },
-  {
-    title: "Self Taught3",
-    avatarIcon: "react",
-    blurb: <BlurbSelfTaught />
-  }
-];
+// export const education = [
+//   {
+//     title: "Self Taught",
+//     avatarIcon: "selfstudy",
+//     blurbComponent: <BlurbSelfTaught />,
+//     blurb:
+//       "I am self taught bla bla bla I am self taught bla bla bla I am self taught bla bla bla",
+//   },
+//   {
+//     title: "Bach. of Mechanical Engineering",
+//     avatarIcon: "qut",
+//     blurb: <BlurbSelfTaught />,
+//   },
+// ];
 
-const projectAreas = [
-  { title: "Area", type: "text", content: area },
-  { title: "Languages", type: "icons", content: languages },
-  { title: "Technologies", type: "icons", content: technologies },
-  { title: "Dev Tools", type: "icons", content: devTools }
-];
+// export const experience = [
+//   {
+//     title: "Self Taught1",
+//     avatarIcon: "react",
+//     blurb: <BlurbSelfTaught />,
+//   },
+//   {
+//     title: "Self Taught2",
+//     avatarIcon: "react",
+//     blurb: <BlurbSelfTaught />,
+//   },
+//   {
+//     title: "Self Taught3",
+//     avatarIcon: "react",
+//     blurb: <BlurbSelfTaught />,
+//   },
+// ];
 
-const projects = [
+// export const projectAreas = [
+//   { title: "Area", type: "text", content: area },
+//   { title: "Languages", type: "icons", content: languages },
+//   { title: "Technologies", type: "icons", content: technologies },
+//   { title: "Dev Tools", type: "icons", content: devTools },
+// ];
+
+export const projects = [
   {
     name: "Orbmaps Website",
     img: "orbmaps-website.jpg",
@@ -85,7 +82,7 @@ const projects = [
     languages: ["html", "css", "javascript"],
     technologies: ["react", "materialui", "netlify"],
     devTools: ["vscode", "git", "bash", "chromedevtools"],
-    demoUrl: "http://www.orbmaps.com"
+    demoUrl: "http://www.orbmaps.com",
   },
   {
     name: "(Review) Orbmaps CRM",
@@ -96,7 +93,7 @@ const projects = [
     languages: ["html", "css", "javascript"],
     technologies: ["react", "rmwc", "aws", "netlify", "couchdb"],
     devTools: ["vscode", "git", "bash", "chromedevtools"],
-    demoUrl: "http://www.orbmaps.com"
+    demoUrl: "http://www.orbmaps.com",
   },
   {
     name: "(Review) Portfolio Website",
@@ -107,7 +104,7 @@ const projects = [
     languages: ["html", "css", "javascript"],
     technologies: ["react", "rmwc"],
     devTools: ["vscode", "git", "bash", "chromedevtools"],
-    demoUrl: "http://www.orbmaps.com"
+    demoUrl: "http://www.orbmaps.com",
   },
   {
     name: "(Review) Know Your Fees",
@@ -118,7 +115,7 @@ const projects = [
     languages: ["html", "css", "javascript"],
     technologies: [],
     devTools: ["vscode", "chromedevtools"],
-    demoUrl: "http://knowyourfees.com.au/"
+    demoUrl: "http://knowyourfees.com.au/",
   },
   {
     name: "(Review) Joint Seal QLD",
@@ -129,7 +126,7 @@ const projects = [
     languages: ["html", "css", "javascript"],
     technologies: [],
     devTools: ["vscode", "chromedevtools"],
-    demoUrl: "http://www.google.com.au/"
+    demoUrl: "http://www.google.com.au/",
   },
   {
     name: "(Review) Easec",
@@ -140,7 +137,7 @@ const projects = [
     languages: ["html", "css", "javascript"],
     technologies: ["wordpress"],
     devTools: ["chromedevtools"],
-    demoUrl: "http://www.easec.com.au/"
+    demoUrl: "http://www.easec.com.au/",
   },
   {
     name: "(Review) Gumtree Notifier",
@@ -151,7 +148,7 @@ const projects = [
     languages: ["javascript"],
     technologies: ["aws", "couchdb", "puppeteer"],
     devTools: ["vscode", "bash", "putty", "winscp"],
-    demoUrl: "http://www.google.com.au/"
+    demoUrl: "http://www.google.com.au/",
   },
   {
     name: "(Review) To-Do List",
@@ -162,26 +159,25 @@ const projects = [
     languages: ["html", "css", "javascript", "sql"],
     technologies: ["react", "redux", "rmwc", "express", "node", "postgres"],
     devTools: ["vscode", "bash", "pgadmin", "chromedevtools"],
-    demoUrl: "http://www.google.com.au/"
-  }
+    demoUrl: "http://www.google.com.au/",
+  },
 ];
 
-const testimonials = Array(4).fill({
+export const testimonials = Array(4).fill({
   name: "Chris Howard",
   company: "Orbmaps",
   role: "Tech Lead",
   img: "https://avatars2.githubusercontent.com/u/23305394?s=460&v=4",
   url: "https://www.linkedin.com/in/moses-hamon/",
-  msg:
-    "Chris is great bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla"
+  msg: "Chris is great bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla",
 });
 
-const navItems = [
-  { name: "About Me", link: "" },
-  { name: "Projects", link: "" },
-  { name: "Experience", link: "" },
-  { name: "Education", link: "" },
-  { name: "Testimonials", link: "" },
-  { name: "Community", link: "" },
-  { name: "Contact", link: "" }
+export const nav = [
+  { id: "about-me", name: "About Me" },
+  { id: "projects", name: "Projects" },
+  { id: "experience", name: "Experience" },
+  { id: "education", name: "Education" },
+  { id: "testimonials", name: "Testimonials" },
+  { id: "community", name: "Community" },
+  { id: "contact", name: "Contact" },
 ];
