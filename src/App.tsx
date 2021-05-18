@@ -4,10 +4,12 @@ import { HashLink } from "react-router-hash-link";
 
 import PageBackground from "./components/PageBackground";
 import Page from "./components/Page";
+import PageContent from "./components/PageContent";
 import AppBar from "./components/AppBar";
 import Toolbar from "./components/Toolbar";
 import Button from "./components/Button";
 import Menu from "./components/Menu";
+import Section from "./components/Section";
 
 import { nav } from "./mock/data.js";
 
@@ -32,7 +34,7 @@ const App: React.FC<{}> = () => {
   ));
   return (
     <PageBackground className="PageBackground--green">
-      <Page fixedWidth marginTopBottom dropShadow>
+      <Page marginTopBottom dropShadow>
         <AppBar className="AppBar--dark-green">
           {isMobile ? (
             <Button hover fullWidth onClick={() => setIsMenuOpen(!isMenuOpen)}>
@@ -43,11 +45,13 @@ const App: React.FC<{}> = () => {
           )}
         </AppBar>
         {isMenuOpen && <Menu>{navButtons}</Menu>}
-        {nav.map((n, i) => (
-          <div id={n.id} key={i} style={{ height: "150px" }}>
-            <h1>{n.name}</h1>
-          </div>
-        ))}
+        <PageContent>
+          {nav.map((n, i) => (
+            <Section id={n.id} key={n.id} title={n.name}>
+              <div style={{ height: "100px" }}>{n.name}</div>
+            </Section>
+          ))}
+        </PageContent>
       </Page>
     </PageBackground>
   );

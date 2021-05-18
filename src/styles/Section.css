@@ -1,0 +1,11 @@
+.Section {
+  padding: 16px 0px;
+}
+
+.Section h1 {
+  margin: 0px;
+}
+
+.Section__body {
+  padding: 8px 0px;
+}

@@ -1,0 +1,6 @@
+.PageContent {
+  box-sizing: border-box;
+  width: 1200px;
+  max-width: 100%;
+  padding: 0px 50px;
+}

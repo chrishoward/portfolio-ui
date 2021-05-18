@@ -4,22 +4,21 @@ import classNames from "classnames";
 import "../styles/Page.css";
 
 interface Props {
-  fixedWidth?: boolean;
+  fullWidth?: boolean;
   marginTopBottom?: boolean;
   dropShadow?: boolean;
   children: ReactNode;
 }
 
 const Page: React.FC<Props> = ({
-  fixedWidth = false,
+  fullWidth = false,
   marginTopBottom = false,
   dropShadow = false,
   children,
 }) => {
   const classes = classNames({
     Page: true,
-    "Page--full-width": !fixedWidth,
-    "Page--fixed-width": fixedWidth,
+    "Page--full-width": fullWidth,
     "Page--margin-top-bottom": marginTopBottom,
     "Page--drop-shadow": dropShadow,
   });
