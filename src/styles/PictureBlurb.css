@@ -1,0 +1,25 @@
+.PictureBlurb {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 16px 0px;
+}
+
+.PictureBlurb__picture {
+  border: 1px solid lightgrey;
+}
+
+@media (min-width: 960px) {
+  .PictureBlurb {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .PictureBlurb__picture {
+    margin: 0px 48px 0px 0px;
+  }
+
+  .PictureBlurb__blurb {
+    margin-top: 16px;
+  }
+}

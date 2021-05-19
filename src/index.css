@@ -1,5 +1,12 @@
 @import-normalize;
 
-body {
-  margin: 0px;
+body,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+ul {
+  padding-left: 24px;
 }

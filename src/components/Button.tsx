@@ -9,6 +9,7 @@ interface Props {
   onClick?: () => void;
   hover?: boolean;
   fullWidth?: boolean;
+  href?: string;
   children: ReactNode;
 }
 
@@ -18,6 +19,7 @@ const Button: React.FC<Props> = ({
   onClick,
   hover,
   fullWidth,
+  href,
   children,
 }) => {
   const classes = classNames(className, {
@@ -25,10 +27,17 @@ const Button: React.FC<Props> = ({
     "Button--hover": hover,
     "Button--full-width": fullWidth,
   });
-  return (
+  const Component = () => (
     <div id={id} className={classes} onClick={onClick}>
       {children}
     </div>
+  );
+  return href ? (
+    <a href={href} target="_blank" rel="noopener noreferrer">
+      <Component />
+    </a>
+  ) : (
+    <Component />
   );
 };
 

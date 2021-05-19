@@ -1,0 +1,20 @@
+.DualList {
+  padding: 4px 0px;
+}
+
+.DualList h3 {
+  margin: 0px;
+}
+
+.DualList ul {
+  margin: 0px;
+}
+
+.DualList__lists-container {
+  display: flex;
+  padding: 0px 16px;
+}
+
+.DualList__list {
+  width: 50%;
+}

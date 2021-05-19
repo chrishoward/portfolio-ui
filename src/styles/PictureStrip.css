@@ -1,0 +1,9 @@
+.PictureStrip__container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.PictureStrip__picture {
+  margin: 15px;
+}

@@ -1,0 +1,25 @@
+.Testimonial {
+  position: relative;
+}
+
+.Testimonial__picture {
+  position: absolute;
+  top: 0;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.Testimonial__spacer {
+  height: 50px;
+}
+
+.Testimonial__body {
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  padding: 65px 15px 25px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

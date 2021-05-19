@@ -1,0 +1,8 @@
+.Project__card {
+  display: flex;
+  flex-direction: column;
+}
+
+.Project__filler {
+  flex: 1;
+}

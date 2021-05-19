@@ -1,0 +1,44 @@
+.Picture--fill {
+  width: 100%;
+}
+
+.Picture--xsmall {
+  width: 50px;
+  height: 50px;
+}
+
+.Picture--small {
+  width: 80px;
+  height: 80px;
+}
+
+.Picture--medium {
+  width: 100px;
+  height: 100px;
+}
+
+.Picture--large {
+  width: 150px;
+  height: 150px;
+}
+
+.Picture--xlarge {
+  width: 220px;
+  height: 220px;
+}
+
+.Picture--radius-small {
+  border-radius: 5%;
+}
+
+.Picture--radius-medium {
+  border-radius: 15%;
+}
+
+.Picture--circle {
+  border-radius: 50%;
+}
+
+.Picture--card {
+  border-bottom: 1px solid lightgrey;
+}

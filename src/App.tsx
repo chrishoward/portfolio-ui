@@ -10,8 +10,49 @@ import Toolbar from "./components/Toolbar";
 import Button from "./components/Button";
 import Menu from "./components/Menu";
 import Section from "./components/Section";
+import AboutMe from "./components/AboutMe";
+import Projects from "./components/Projects";
+import PictureBlurbList from "./components/PictureBlurbList";
+import Testimonials from "./components/Testimonials";
+import Community from "./components/Community";
+import Contact from "./components/Contact";
 
-import { nav } from "./mock/data.js";
+import data from "./mock/data";
+
+const sections = [
+  { id: "about-me", title: "About Me", dataKey: "aboutMe", component: AboutMe },
+  {
+    id: "projects",
+    title: "Projects",
+    dataKey: "projects",
+    component: Projects,
+  },
+  {
+    id: "experience",
+    title: "Experience",
+    dataKey: "experience",
+    component: PictureBlurbList,
+  },
+  {
+    id: "education",
+    title: "Education",
+    dataKey: "education",
+    component: PictureBlurbList,
+  },
+  {
+    id: "testimonials",
+    title: "Testimonials",
+    dataKey: "testimonials",
+    component: Testimonials,
+  },
+  {
+    id: "community",
+    title: "Community",
+    dataKey: "community",
+    component: Community,
+  },
+  { id: "contact", title: "Contact", dataKey: "contact", component: Contact },
+];
 
 const breakpoint = 959;
 
@@ -25,10 +66,10 @@ const App: React.FC<{}> = () => {
   const { width } = useWindowSize();
   const isMobile = width < breakpoint;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const navButtons = nav.map((n) => (
+  const navButtons = sections.map((n) => (
     <HashLink smooth to={`/#${n.id}`} scroll={(el) => scrollWithOffset(el)}>
       <Button key={n.id} hover onClick={() => setIsMenuOpen(false)}>
-        {n.name}
+        {n.title}
       </Button>
     </HashLink>
   ));
@@ -46,9 +87,9 @@ const App: React.FC<{}> = () => {
         </AppBar>
         {isMenuOpen && <Menu>{navButtons}</Menu>}
         <PageContent>
-          {nav.map((n, i) => (
-            <Section id={n.id} key={n.id} title={n.name}>
-              <div style={{ height: "100px" }}>{n.name}</div>
+          {sections.map(({ id, title, dataKey, component: Component }) => (
+            <Section key={id} id={id} title={title}>
+              <Component data={(data as any)[dataKey]} />
             </Section>
           ))}
         </PageContent>

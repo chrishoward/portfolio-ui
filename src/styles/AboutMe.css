@@ -1,0 +1,20 @@
+.AboutMe {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.AboutMe__picture {
+  margin: 16px 0px;
+}
+
+@media (min-width: 960px) {
+  .AboutMe {
+    flex-direction: row;
+  }
+
+  .AboutMe__picture {
+    margin-left: 48px;
+  }
+}
