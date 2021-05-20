@@ -12,7 +12,7 @@ const PictureBlurbList: React.FC<Props> = ({ data }) => {
   const classes = classNames({});
   return (
     <div>
-      {data.map((d) => (
+      {data.map((d: any) => (
         <PictureBlurb src={d.src} alt={d.alt} title={d.title}>
           {d.text}
         </PictureBlurb>

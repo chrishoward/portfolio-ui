@@ -18,7 +18,7 @@ const Projects: React.FC<Props> = ({ data }) => {
   // const classes = classNames({});
   return (
     <Grid>
-      {data.map((p) => (
+      {data.map((p: any) => (
         <Card className="Project__card">
           <Picture
             className="Picture--card"
@@ -34,7 +34,7 @@ const Projects: React.FC<Props> = ({ data }) => {
             <DualList title="Dev Tools">{p.devTools}</DualList>
           </CardContent>
           <div className="Project__filler" />
-          <Button href={p.demoUrl} hover>
+          <Button className="Projects__button" href={p.demoUrl} hover>
             Demo
           </Button>
         </Card>

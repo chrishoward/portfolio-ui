@@ -3,8 +3,8 @@
   flex-direction: column;
   position: relative;
   align-items: center;
-  background-color: white;
   max-width: 100%;
+  border-radius: 10px;
 }
 
 .Page--full-width {

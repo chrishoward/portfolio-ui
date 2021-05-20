@@ -1,11 +1,16 @@
 .Section {
-  padding: 16px 0px;
+  padding: 70px 0px 0px 0px;
 }
 
-.Section h1 {
-  margin: 0px;
+.Section__title {
+  text-align: center;
+  margin-bottom: 50px;
 }
 
 .Section__body {
-  padding: 8px 24px;
+  padding: 0px 24px;
+}
+
+.Section__separator {
+  margin-top: 80px;
 }

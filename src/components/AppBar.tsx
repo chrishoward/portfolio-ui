@@ -5,12 +5,14 @@ import "../styles/AppBar.css";
 
 interface Props {
   className?: string;
+  dropShadow?: boolean;
   children: ReactNode;
 }
 
-const AppBar: React.FC<Props> = ({ className, children }) => {
+const AppBar: React.FC<Props> = ({ className, dropShadow, children }) => {
   const classes = classNames(className, {
     AppBar: true,
+    "AppBar--drop-shadow": dropShadow,
   });
   return <div className={classes}>{children}</div>;
 };

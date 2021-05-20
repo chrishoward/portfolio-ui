@@ -5,12 +5,13 @@
   padding: 0px 16px;
   cursor: pointer;
   height: 50px;
-  background-color: blueviolet;
   color: white;
+  background-color: var(--theme-primary);
+  text-decoration: none;
 }
 
 .Button--hover:hover {
-  background-color: rgb(154, 82, 221);
+  background-color: var(--theme-secondary);
 }
 
 .Button--full-width {

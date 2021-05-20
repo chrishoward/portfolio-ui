@@ -7,14 +7,18 @@
 
 .AboutMe__picture {
   margin: 16px 0px;
+  border: 5px solid var(--theme-primary);
 }
 
 @media (min-width: 960px) {
   .AboutMe {
     flex-direction: row;
+    align-items: flex-start;
   }
 
   .AboutMe__picture {
-    margin-left: 48px;
+    height: 300px;
+    width: 300px;
+    margin: 0px 0px 0px 50px;
   }
 }

@@ -16,8 +16,11 @@ import PictureBlurbList from "./components/PictureBlurbList";
 import Testimonials from "./components/Testimonials";
 import Community from "./components/Community";
 import Contact from "./components/Contact";
+import Banner from "./components/Banner";
 
 import data from "./mock/data";
+
+import "./App.css";
 
 const sections = [
   { id: "about-me", title: "About Me", dataKey: "aboutMe", component: AboutMe },
@@ -74,9 +77,10 @@ const App: React.FC<{}> = () => {
     </HashLink>
   ));
   return (
-    <PageBackground className="PageBackground--green">
-      <Page marginTopBottom dropShadow>
-        <AppBar className="AppBar--dark-green">
+    <PageBackground className="App__background">
+      <Page marginTopBottom>
+        <Banner>{"< Chris Howard />"}</Banner>
+        <AppBar dropShadow>
           {isMobile ? (
             <Button hover fullWidth onClick={() => setIsMenuOpen(!isMenuOpen)}>
               Menu
@@ -86,12 +90,17 @@ const App: React.FC<{}> = () => {
           )}
         </AppBar>
         {isMenuOpen && <Menu>{navButtons}</Menu>}
-        <PageContent>
-          {sections.map(({ id, title, dataKey, component: Component }) => (
-            <Section key={id} id={id} title={title}>
-              <Component data={(data as any)[dataKey]} />
-            </Section>
-          ))}
+        <PageContent dropShadow>
+          {sections.map(
+            ({ id, title, dataKey, component: Component }, i, arr) => {
+              const last = i + 1 === arr.length;
+              return (
+                <Section key={id} id={id} title={title} separator={!last}>
+                  <Component data={(data as any)[dataKey]} />
+                </Section>
+              );
+            }
+          )}
         </PageContent>
       </Page>
     </PageBackground>

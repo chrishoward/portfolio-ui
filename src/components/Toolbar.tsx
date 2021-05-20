@@ -12,7 +12,7 @@ const Toolbar: React.FC<Props> = ({ className, children }) => {
   const classes = classNames(className, {
     Toolbar: true,
   });
-  return <div className={classes}>{children}</div>;
+  return <nav className={classes}>{children}</nav>;
 };
 
 export default Toolbar;

@@ -11,20 +11,18 @@ interface Props {
 const AboutMe: React.FC<Props> = ({ data }) => {
   return (
     <div className="AboutMe">
-      <div>
-        {data.blurbs.map((b) => (
+      <div className="AboutMe__blurbs">
+        {data.blurbs.map((b: any) => (
           <Blurb title={b.title}>{b.text}</Blurb>
         ))}
       </div>
-      <div className="AboutMe__picture">
-        <Picture
-          src={data.img}
-          alt={data.alt}
-          href={data.url}
-          size="xlarge"
-          radius="medium"
-        />
-      </div>
+      <Picture
+        className="AboutMe__picture"
+        src={data.img}
+        alt={data.alt}
+        href={data.url}
+        radius="medium"
+      />
     </div>
   );
 };

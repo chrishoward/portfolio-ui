@@ -12,3 +12,8 @@ Todo:
 - remove unused classNames code
 - check console errors
 - hide https:// in url bar, so just chrishoward.com.au
+- missing "Chris Howard" at top of page "Software Developer"
+- check undefined classes in devtools
+- cleanup index.css
+  -test mobile/browsers etc
+  -backup fonts

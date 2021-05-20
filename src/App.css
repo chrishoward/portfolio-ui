@@ -1,0 +1,15 @@
+.App__background {
+  background: linear-gradient(
+    185deg,
+    var(--theme-secondary) 0%,
+    var(--theme-secondary) 10%,
+    var(--theme-tertiary) 10%,
+    var(--theme-tertiary) 35%,
+    var(--theme-secondary) 35%,
+    var(--theme-secondary) 65%,
+    var(--theme-tertiary) 65%,
+    var(--theme-tertiary) 90%,
+    var(--theme-secondary) 90%,
+    var(--theme-secondary) 100%
+  );
+}
