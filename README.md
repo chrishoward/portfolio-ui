@@ -15,5 +15,7 @@ Todo:
 - missing "Chris Howard" at top of page "Software Developer"
 - check undefined classes in devtools
 - cleanup index.css
-  -test mobile/browsers etc
-  -backup fonts
+- test mobile/browsers etc
+- backup fonts
+- test on desktop
+- test on mobile (especially the menu scrolling)
