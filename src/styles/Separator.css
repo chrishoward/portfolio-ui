@@ -1,5 +1,6 @@
 .Separator {
-  width: fit-content;
+  max-width: 100%;
+  width: 650px;
   margin: auto;
   display: flex;
   align-items: center;
@@ -17,7 +18,8 @@
   /* color: var(--theme-secondary); */
   /* font-size: 30px; */
   /* font-weight: 600; */
-  width: 300px;
+  /* width: 300px; */
+  flex: 1;
   height: 0px;
   border-top: 3px solid var(--theme-secondary);
   text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.115);

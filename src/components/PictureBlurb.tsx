@@ -8,11 +8,12 @@ import "../styles/PictureBlurb.css";
 interface Props {
   src: string;
   alt: string;
+  url?: string;
   title: string;
   children: string;
 }
 
-const PictureBlurb: React.FC<Props> = ({ src, alt, title, children }) => {
+const PictureBlurb: React.FC<Props> = ({ src, alt, url, title, children }) => {
   //  const classes = classNames({  })
   return (
     <div className="PictureBlurb">
@@ -20,10 +21,11 @@ const PictureBlurb: React.FC<Props> = ({ src, alt, title, children }) => {
         className="PictureBlurb__picture"
         src={src}
         alt={alt}
+        href={url}
         size="large"
         radius="medium"
       />
-      <Blurb className="PictureBlurb__blurb" title={title}>
+      <Blurb className="PictureBlurb__blurb" title={title} href={url}>
         {children}
       </Blurb>
     </div>

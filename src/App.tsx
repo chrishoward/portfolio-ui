@@ -22,6 +22,7 @@ import data from "./mock/data";
 
 import "./App.css";
 
+const Comp = () => <div style={{ height: "200px" }}>...</div>;
 const sections = [
   { id: "about-me", title: "About Me", dataKey: "aboutMe", component: AboutMe },
   {
@@ -60,9 +61,11 @@ const sections = [
 const breakpoint = 959;
 
 const scrollWithOffset = (el: HTMLElement) => {
-  const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
-  const yOffset = -70;
-  window.scrollTo({ top: yCoordinate + yOffset, behavior: "smooth" });
+  setTimeout(() => {
+    const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
+    const yOffset = -15;
+    window.scrollTo({ top: yCoordinate + yOffset, behavior: "smooth" });
+  }, 200);
 };
 
 const App: React.FC<{}> = () => {
@@ -79,7 +82,7 @@ const App: React.FC<{}> = () => {
   return (
     <PageBackground className="App__background">
       <Page marginTopBottom>
-        <Banner>{"< Chris Howard />"}</Banner>
+        <Banner src="/images/banner.svg" />
         <AppBar dropShadow>
           {isMobile ? (
             <Button hover fullWidth onClick={() => setIsMenuOpen(!isMenuOpen)}>

@@ -14,29 +14,56 @@ interface Props {
   data: any;
 }
 
+const lists = [
+  { title: "Area", key: "area" },
+  { title: "Languages", key: "languages" },
+  { title: "Technologies", key: "technologies" },
+  { title: "Dev Tools", key: "devTools" },
+];
+
 const Projects: React.FC<Props> = ({ data }) => {
   // const classes = classNames({});
   return (
     <Grid>
       {data.map((p: any) => (
         <Card className="Project__card">
-          <Picture
-            className="Picture--card"
-            src={p.img}
-            alt={p.name}
-            href={p.demoUrl}
-          />
+          <div className="Projects__picture-container">
+            <Picture
+              className="Project__picture"
+              src={p.img}
+              alt={p.name}
+              href={p.url}
+            />
+          </div>
           <CardContent>
-            <Blurb title={p.name}>{p.description}</Blurb>
-            <DualList title="Area">{p.area}</DualList>
-            <DualList title="Languages">{p.languages}</DualList>
-            <DualList title="Technologies">{p.technologies}</DualList>
-            <DualList title="Dev Tools">{p.devTools}</DualList>
+            <Blurb className="Projects__blurb" title={p.name}>
+              {p.description}
+            </Blurb>
+            {lists
+              .filter(({ title, key }) => p[key].length > 0)
+              .map(({ title, key }) => (
+                <DualList title={title}>{p[key]}</DualList>
+              ))}
           </CardContent>
           <div className="Project__filler" />
-          <Button className="Projects__button" href={p.demoUrl} hover>
-            Demo
-          </Button>
+          <div className="Project__button-container">
+            <Button
+              className="Projects__button Projects__button--left"
+              href={p.code}
+              disabled={p.code === "private"}
+              hover
+            >
+              {`Code${p.code === "private" ? " (Private)" : ""}`}
+            </Button>
+            <Button
+              className="Projects__button Projects__button--right"
+              href={p.url}
+              disabled={p.demo === "private"}
+              hover
+            >
+              {`Demo${p.demo === "private" ? " (Private)" : ""}`}
+            </Button>
+          </div>
         </Card>
       ))}
     </Grid>

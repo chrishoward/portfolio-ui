@@ -4,12 +4,12 @@ import React, { ReactNode } from "react";
 import "../styles/Banner.css";
 
 interface Props {
-  children: string;
+  src: string;
 }
 
-const Banner: React.FC<Props> = ({ children }) => {
+const Banner: React.FC<Props> = ({ src }) => {
   //  const classes = classNames({  })
-  return <header className="Banner">{children}</header>;
+  return <img className="Banner" src={src} alt="Chris Howard" />;
 };
 
 export default Banner;

@@ -2,12 +2,12 @@
   padding: 4px 0px;
 }
 
-.DualList h3 {
+.DualList ul {
   margin: 0px;
 }
 
-.DualList ul {
-  margin: 0px;
+.DualList__title {
+  margin-bottom: 4px;
 }
 
 .DualList__lists-container {
@@ -17,4 +17,5 @@
 
 .DualList__list {
   width: 50%;
+  line-height: 24px;
 }

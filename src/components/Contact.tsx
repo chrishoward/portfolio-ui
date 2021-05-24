@@ -18,7 +18,7 @@ const Contact: React.FC<Props> = ({ data }) => {
         <Picture
           src={d.src}
           alt={d.alt}
-          href={d.href}
+          href={d.url}
           size="medium"
           radius="medium"
         />

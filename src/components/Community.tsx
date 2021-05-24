@@ -13,7 +13,9 @@ const Community: React.FC<Props> = ({ data }) => {
   const classes = classNames({});
   return (
     <div>
-      <p>Currently attending all of the following meetups each month:</p>
+      <p className="Community__text">
+        Currently attending all of the following meetups each month:
+      </p>
       <PictureStrip>
         {data.map((d: any) => (
           <Picture

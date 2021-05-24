@@ -10,9 +10,14 @@
   font-weight: 400;
   text-shadow: 4px 4px rgba(0, 0, 0, 0.15);
   font-size: 62px;
-  margin-bottom: -13px;
+  margin-bottom: -8px;
   /* margin-bottom: 0px; */
   /* font-size: 40px; */
   z-index: 2;
   color: white;
+  pointer-events: none;
+  width: 568px;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 0px 24px;
 }

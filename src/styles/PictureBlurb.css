@@ -9,6 +9,10 @@
   border: 1px solid lightgrey;
 }
 
+.PictureBlurb__blurb {
+  margin-bottom: 28px;
+}
+
 @media (min-width: 960px) {
   .PictureBlurb {
     flex-direction: row;

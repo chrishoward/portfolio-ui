@@ -13,7 +13,9 @@ const AboutMe: React.FC<Props> = ({ data }) => {
     <div className="AboutMe">
       <div className="AboutMe__blurbs">
         {data.blurbs.map((b: any) => (
-          <Blurb title={b.title}>{b.text}</Blurb>
+          <Blurb className="AboutMe__blurb" title={b.title}>
+            {b.text}
+          </Blurb>
         ))}
       </div>
       <Picture

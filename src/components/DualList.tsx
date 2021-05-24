@@ -16,7 +16,7 @@ const DualList: React.FC<Props> = ({ title, children }) => {
   const list2 = children.slice(half, len);
   return (
     <div className="DualList">
-      <h3>{title}</h3>
+      <h3 className="DualList__title">{title}</h3>
       <div className="DualList__lists-container">
         {[list1, list2].map((l) => (
           <ul className="DualList__list">

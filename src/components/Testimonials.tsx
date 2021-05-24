@@ -13,8 +13,16 @@ const Testimonials: React.FC<Props> = ({ data }) => {
   const classes = classNames({});
   return (
     <Grid>
-      {data.map(() => (
-        <Testimonial />
+      {data.map((d: any) => (
+        <Testimonial
+          name={d.name}
+          role={d.role}
+          company={d.company}
+          img={d.img}
+          url={d.url}
+        >
+          {d.msg}
+        </Testimonial>
       ))}
     </Grid>
   );

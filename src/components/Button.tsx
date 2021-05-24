@@ -8,6 +8,7 @@ interface Props {
   id?: string;
   onClick?: () => void;
   hover?: boolean;
+  disabled?: boolean;
   fullWidth?: boolean;
   href?: string;
   children: ReactNode;
@@ -18,6 +19,7 @@ const Button: React.FC<Props> = ({
   id,
   onClick,
   hover,
+  disabled,
   fullWidth,
   href,
   children,
@@ -26,6 +28,7 @@ const Button: React.FC<Props> = ({
     Button: true,
     "Button--hover": hover,
     "Button--full-width": fullWidth,
+    "Button--disabled": disabled,
   });
   const Component = () => (
     <div id={id} className={classes} onClick={onClick}>
@@ -33,7 +36,12 @@ const Button: React.FC<Props> = ({
     </div>
   );
   return href ? (
-    <a href={href} target="_blank" rel="noopener noreferrer">
+    <a
+      className={disabled ? "Button--disabled" : ""}
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <Component />
     </a>
   ) : (

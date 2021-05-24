@@ -3,10 +3,50 @@
   flex-direction: column;
 }
 
+.Project__picture {
+  border-bottom: 1px solid lightgrey;
+}
+
+.Project__picture:hover {
+  opacity: 0.8;
+}
+
+.Projects__picture-container {
+  /* background-color: black; */
+}
+
 .Project__filler {
   flex: 1;
 }
 
+.Projects__blurb {
+  margin-bottom: 8px;
+}
+
+.Project__button-container {
+  display: flex;
+  width: 100%;
+  /* padding: 8px; */
+}
+
+.Project__button-container a {
+  flex: 1;
+}
+
 .Projects__button {
-  border-radius: 0px 0px 8px 8px;
+  /* display: inline-block; */
+  flex: 1;
+  border-radius: 0px 0px 0px 0px;
+  /* border-bottom: 2px solid white; */
+  /* width: 50%; */
+  /* box-sizing: border-box; */
+}
+
+.Projects__button--left {
+  /* border-left: 3px solid white; */
+  border-right: 2px solid white;
+}
+
+.Projects__button--right {
+  /* border-right: 3px solid white; */
 }

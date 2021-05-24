@@ -23,3 +23,7 @@
   flex-direction: column;
   align-items: center;
 }
+
+.Testimonial__msg {
+  margin-bottom: 24px;
+}

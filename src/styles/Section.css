@@ -14,3 +14,9 @@
 .Section__separator {
   margin-top: 80px;
 }
+
+@media (min-width: 960px) {
+  .Section__body {
+    padding: 0px 48px;
+  }
+}

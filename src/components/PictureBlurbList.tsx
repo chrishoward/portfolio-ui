@@ -13,7 +13,7 @@ const PictureBlurbList: React.FC<Props> = ({ data }) => {
   return (
     <div>
       {data.map((d: any) => (
-        <PictureBlurb src={d.src} alt={d.alt} title={d.title}>
+        <PictureBlurb src={d.src} alt={d.alt} url={d.url} title={d.title}>
           {d.text}
         </PictureBlurb>
       ))}

@@ -6,8 +6,14 @@
 }
 
 .AboutMe__picture {
-  margin: 16px 0px;
   border: 5px solid var(--theme-primary);
+  width: 300px;
+  max-width: 100%;
+  margin: 0px 0px 40px 0px;
+}
+
+.AboutMe__blurb {
+  margin-bottom: 24px;
 }
 
 @media (min-width: 960px) {
@@ -17,8 +23,8 @@
   }
 
   .AboutMe__picture {
-    height: 300px;
     width: 300px;
-    margin: 0px 0px 0px 50px;
+    max-width: unset;
+    margin: 16px 0px 16px 50px;
   }
 }

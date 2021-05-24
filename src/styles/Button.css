@@ -17,3 +17,8 @@
 .Button--full-width {
   width: 100%;
 }
+
+.Button--disabled {
+  pointer-events: none;
+  background-color: lightgrey;
+}
