@@ -38,7 +38,7 @@ const Testimonial: React.FC<Props> = ({
       <div className="Testimonial__body">
         <p className="Testimonial__msg">{children}</p>
         {url ? <a href={url}>{nameEl}</a> : nameEl}
-        <h3>{`${role}, ${company}`}</h3>
+        <h3 className="Testimonial__role-company">{`${role}, ${company}`}</h3>
       </div>
     </div>
   );

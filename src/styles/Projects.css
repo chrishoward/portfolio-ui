@@ -5,10 +5,7 @@
 
 .Project__picture {
   border-bottom: 1px solid lightgrey;
-}
-
-.Project__picture:hover {
-  opacity: 0.8;
+  height: 235px;
 }
 
 .Projects__picture-container {

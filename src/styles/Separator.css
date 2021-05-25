@@ -5,6 +5,8 @@
   display: flex;
   align-items: center;
   font-family: "Rubik";
+  padding: 0px 80px 0px 80px;
+  box-sizing: border-box;
 }
 
 /* .Separator__side {

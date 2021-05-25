@@ -28,12 +28,7 @@ const Projects: React.FC<Props> = ({ data }) => {
       {data.map((p: any) => (
         <Card className="Project__card">
           <div className="Projects__picture-container">
-            <Picture
-              className="Project__picture"
-              src={p.img}
-              alt={p.name}
-              href={p.url}
-            />
+            <Picture className="Project__picture" src={p.img} alt={p.name} />
           </div>
           <CardContent>
             <Blurb className="Projects__blurb" title={p.name}>
@@ -58,10 +53,10 @@ const Projects: React.FC<Props> = ({ data }) => {
             <Button
               className="Projects__button Projects__button--right"
               href={p.url}
-              disabled={p.demo === "private"}
+              disabled={p.url === "private"}
               hover
             >
-              {`Demo${p.demo === "private" ? " (Private)" : ""}`}
+              {`Demo${p.url === "private" ? " (Private)" : ""}`}
             </Button>
           </div>
         </Card>
