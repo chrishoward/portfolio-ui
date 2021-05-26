@@ -36,3 +36,13 @@ Todo:
 - make sure no secrets/sensitive data in portfolio repos before making public. and other apps too
 - gumtree notifier code (any other missing urls/code) in projects
 - https on other sites of mine?
+- robots
+  -front end checklist
+  -typo check
+
+testimonials:
+
+- kris (orbmaps)
+- paul (udrew)
+- tom (udrew)
+- craig (synchrotech)
