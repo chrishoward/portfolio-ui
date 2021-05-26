@@ -14,7 +14,8 @@ const Community: React.FC<Props> = ({ data }) => {
   return (
     <div>
       <p className="Community__text">
-        Currently attending all of the following meetups each month:
+        Currently attending all of the following meetups as a great way to meet
+        like-minded developers and learn new things.
       </p>
       <PictureStrip>
         {data.map((d: any) => (

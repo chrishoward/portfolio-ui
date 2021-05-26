@@ -7,6 +7,7 @@ interface Props {
   className?: string;
   src: string;
   alt: string;
+  title?: string;
   href?: string;
   size?: string;
   radius?: string;
@@ -16,6 +17,7 @@ const Picture: React.FC<Props> = ({
   className,
   src,
   alt,
+  title,
   href,
   size = "fill",
   radius = "none",
@@ -36,6 +38,7 @@ const Picture: React.FC<Props> = ({
       className={classes}
       src={src.includes("http") ? src : `/images/${src}`}
       alt={alt}
+      title={title}
     />
   );
   return href ? (
