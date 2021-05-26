@@ -1,5 +1,4 @@
 import React, { ReactNode } from "react";
-// import classNames from "classnames";
 
 import "../styles/Menu.css";
 
@@ -8,9 +7,6 @@ interface Props {
 }
 
 const Menu: React.FC<Props> = ({ children }) => {
-  // const classes = classNames({
-
-  // });
   return <div className="Menu">{children}</div>;
 };
 

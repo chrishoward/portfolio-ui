@@ -14,5 +14,7 @@
 }
 
 @media (min-width: 960px) {
-  padding: 0px 58px 80px 58px;
+  .PageContent {
+    padding: 0px 58px 80px 58px;
+  }
 }

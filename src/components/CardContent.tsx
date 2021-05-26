@@ -1,5 +1,4 @@
 import React, { ReactNode } from "react";
-// import classNames from "classnames";
 
 import "../styles/CardContent.css";
 
@@ -8,7 +7,6 @@ interface Props {
 }
 
 const CardContent: React.FC<Props> = ({ children }) => {
-  // const classes = classNames({});
   return <div className="CardContent">{children}</div>;
 };
 

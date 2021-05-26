@@ -9,8 +9,10 @@ interface Props {
 const PictureStrip: React.FC<Props> = ({ children }) => {
   return (
     <div className="PictureStrip__container">
-      {children!.map((c) => (
-        <div className="PictureStrip__picture">{c}</div>
+      {children!.map((c, i) => (
+        <div key={i} className="PictureStrip__picture">
+          {c}
+        </div>
       ))}
     </div>
   );

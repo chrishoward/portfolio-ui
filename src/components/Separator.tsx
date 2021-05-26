@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React from "react";
 import classNames from "classnames";
 
 import "../styles/Separator.css";
@@ -9,9 +9,6 @@ interface Props {
 
 const Separator: React.FC<Props> = ({ className }) => {
   const classes = classNames(className, { Separator: true });
-  // const side = (
-  // <span className="Separator__side">-----------------------------</span>
-  // );
   const side = <span className="Separator__side" />;
   return (
     <div className={classes}>

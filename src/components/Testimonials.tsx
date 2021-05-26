@@ -1,20 +1,18 @@
-import React, { ReactNode } from "react";
-import classNames from "classnames";
+import React from "react";
 
 import Grid from "./Grid";
 import Testimonial from "./Testimonial";
-// import "../styles/Testimonials.css";
 
 interface Props {
   data: any;
 }
 
 const Testimonials: React.FC<Props> = ({ data }) => {
-  const classes = classNames({});
   return (
     <Grid>
       {data.map((d: any) => (
         <Testimonial
+          key={d.name}
           name={d.name}
           role={d.role}
           company={d.company}

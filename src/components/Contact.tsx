@@ -1,9 +1,7 @@
-import React, { ReactNode } from "react";
-import classNames from "classnames";
+import React from "react";
 
 import PictureStrip from "./PictureStrip";
 import Picture from "./Picture";
-
 import "../styles/Contact.css";
 
 interface Props {
@@ -11,11 +9,11 @@ interface Props {
 }
 
 const Contact: React.FC<Props> = ({ data }) => {
-  const classes = classNames({});
   return (
     <PictureStrip>
       {data.map((d: any) => (
         <Picture
+          key={d.title}
           className="Contact__picture"
           src={d.src}
           alt={d.alt}

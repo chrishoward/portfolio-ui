@@ -1,5 +1,4 @@
 import React from "react";
-// import classNames from 'classnames';
 
 import Picture from "./Picture";
 import Blurb from "./Blurb";
@@ -14,7 +13,6 @@ interface Props {
 }
 
 const PictureBlurb: React.FC<Props> = ({ src, alt, url, title, children }) => {
-  //  const classes = classNames({  })
   return (
     <div className="PictureBlurb">
       <Picture

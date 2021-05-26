@@ -1,5 +1,4 @@
-import React, { ReactNode } from "react";
-import classNames from "classnames";
+import React from "react";
 
 import Picture from "./Picture";
 import PictureStrip from "./PictureStrip";
@@ -10,9 +9,8 @@ interface Props {
 }
 
 const Community: React.FC<Props> = ({ data }) => {
-  const classes = classNames({});
   return (
-    <div>
+    <>
       <p className="Community__text">
         Currently attending all of the following meetups as a great way to meet
         like-minded developers and learn new things.
@@ -20,6 +18,7 @@ const Community: React.FC<Props> = ({ data }) => {
       <PictureStrip>
         {data.map((d: any) => (
           <Picture
+            key={d.meetup}
             className="Community__picture"
             src={d.src}
             alt={d.alt}
@@ -29,7 +28,7 @@ const Community: React.FC<Props> = ({ data }) => {
           />
         ))}
       </PictureStrip>
-    </div>
+    </>
   );
 };
 

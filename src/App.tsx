@@ -17,12 +17,10 @@ import Testimonials from "./components/Testimonials";
 import Community from "./components/Community";
 import Contact from "./components/Contact";
 import Banner from "./components/Banner";
-
+import { scrollWithOffset, breakpoint } from "./utils/misc";
 import data from "./mock/data";
-
 import "./App.css";
 
-const Comp = () => <div style={{ height: "200px" }}>...</div>;
 const sections = [
   { id: "about-me", title: "About Me", dataKey: "aboutMe", component: AboutMe },
   {
@@ -58,27 +56,25 @@ const sections = [
   { id: "contact", title: "Contact", dataKey: "contact", component: Contact },
 ];
 
-const breakpoint = 959;
-
-const scrollWithOffset = (el: HTMLElement) => {
-  setTimeout(() => {
-    const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
-    const yOffset = -15;
-    window.scrollTo({ top: yCoordinate + yOffset, behavior: "smooth" });
-  }, 200);
-};
-
 const App: React.FC<{}> = () => {
   const { width } = useWindowSize();
   const isMobile = width < breakpoint;
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   const navButtons = sections.map((n) => (
-    <HashLink smooth to={`/#${n.id}`} scroll={(el) => scrollWithOffset(el)}>
+    <HashLink
+      key={n.id}
+      smooth
+      to={`/#${n.id}`}
+      scroll={(el) => scrollWithOffset(el)}
+    >
       <Button key={n.id} hover onClick={() => setIsMenuOpen(false)}>
         {n.title}
       </Button>
     </HashLink>
   ));
+
   return (
     <PageBackground className="App__background">
       <Page marginTopBottom>
