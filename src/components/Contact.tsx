@@ -15,9 +15,9 @@ const Contact: React.FC<Props> = ({ data }) => {
         <Picture
           key={d.title}
           className="Contact__picture"
-          src={d.src}
+          src={d.img}
           alt={d.alt}
-          href={d.url}
+          href={d.link}
           title={d.title}
           size="medium"
           radius="medium"

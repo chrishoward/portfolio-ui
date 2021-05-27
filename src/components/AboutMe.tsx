@@ -22,7 +22,7 @@ const AboutMe: React.FC<Props> = ({ data }) => {
         className="AboutMe__picture"
         src={data.img}
         alt={data.alt}
-        href={data.url}
+        href={data.link}
         radius="medium"
       />
     </div>

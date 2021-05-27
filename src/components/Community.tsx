@@ -18,13 +18,13 @@ const Community: React.FC<Props> = ({ data }) => {
       <PictureStrip>
         {data.map((d: any) => (
           <Picture
-            key={d.meetup}
+            key={d.img}
             className="Community__picture"
-            src={d.src}
+            src={d.img}
             alt={d.alt}
             size="xlarge"
             radius="small"
-            href={d.url}
+            href={d.link}
           />
         ))}
       </PictureStrip>

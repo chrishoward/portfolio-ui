@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useWindowSize } from "react-use";
 import { HashLink } from "react-router-hash-link";
 
@@ -18,7 +18,6 @@ import Community from "./components/Community";
 import Contact from "./components/Contact";
 import Banner from "./components/Banner";
 import { scrollWithOffset, breakpoint } from "./utils/misc";
-import data from "./mock/data";
 import "./App.css";
 
 const sections = [
@@ -59,8 +58,18 @@ const sections = [
 const App: React.FC<{}> = () => {
   const { width } = useWindowSize();
   const isMobile = width < breakpoint;
-
+  const [data, setData] = useState<object | null>(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  useEffect(() => {
+    async function getData() {
+      const apiUrl = `http://${process.env.REACT_APP_API_HOST}:${process.env.REACT_APP_API_PORT}/`;
+      const response = await fetch(apiUrl);
+      const appData = await response.json();
+      setData(appData);
+    }
+    getData();
+  }, []);
 
   const navButtons = sections.map((n) => (
     <HashLink
@@ -74,6 +83,10 @@ const App: React.FC<{}> = () => {
       </Button>
     </HashLink>
   ));
+
+  if (!data) {
+    return <p>Loading...</p>;
+  }
 
   return (
     <PageBackground className="App__background">

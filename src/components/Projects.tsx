@@ -18,7 +18,7 @@ const lists = [
   { title: "Area", key: "area" },
   { title: "Languages", key: "languages" },
   { title: "Technologies", key: "technologies" },
-  { title: "Dev Tools", key: "devTools" },
+  { title: "Dev Tools", key: "tools" },
 ];
 
 const isPrivate = (str: string) => str === "private";
@@ -27,10 +27,10 @@ const Projects: React.FC<Props> = ({ data }) => {
   return (
     <Grid>
       {data.map((p: any) => (
-        <Card key={p.name} className="Project__card">
-          <Picture className="Project__picture" src={p.img} alt={p.name} />
+        <Card key={p.title} className="Project__card">
+          <Picture className="Project__picture" src={p.img} alt={p.title} />
           <CardContent>
-            <Blurb className="Projects__blurb" title={p.name}>
+            <Blurb className="Projects__blurb" title={p.title}>
               {p.description}
             </Blurb>
             {lists
@@ -43,20 +43,21 @@ const Projects: React.FC<Props> = ({ data }) => {
           </CardContent>
           <div className="Project__filler" />
           <div className="Project__button-container">
-            {["code", "url"].map((str) => {
+            {["Code", "Demo"].map((str, i) => {
               const classes = classNames({
                 Projects__button: true,
-                "Projects__button--left": str === "code",
+                "Projects__button--left": i === 0,
               });
+              const key = str.toLowerCase();
               return (
                 <Button
                   key={str}
                   className={classes}
-                  href={p[str]}
-                  disabled={isPrivate(p[str])}
+                  href={p[key]}
+                  disabled={isPrivate(p[key])}
                   hover
                 >
-                  {`Code${isPrivate(p[str]) ? " (Private)" : ""}`}
+                  {`${str}${isPrivate(p[key]) ? " (Private)" : ""}`}
                 </Button>
               );
             })}

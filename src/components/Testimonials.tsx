@@ -17,9 +17,9 @@ const Testimonials: React.FC<Props> = ({ data }) => {
           role={d.role}
           company={d.company}
           img={d.img}
-          url={d.url}
+          url={d.link}
         >
-          {d.msg}
+          {d.text}
         </Testimonial>
       ))}
     </Grid>

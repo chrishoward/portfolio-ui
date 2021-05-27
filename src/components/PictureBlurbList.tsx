@@ -11,9 +11,9 @@ const PictureBlurbList: React.FC<Props> = ({ data }) => {
       {data.map((d: any) => (
         <PictureBlurb
           key={d.title}
-          src={d.src}
+          src={d.img}
           alt={d.alt}
-          url={d.url}
+          url={d.link}
           title={d.title}
         >
           {d.text}
