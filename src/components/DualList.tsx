@@ -4,11 +4,11 @@ import "../styles/DualList.css";
 
 interface Props {
   title?: string;
-  children: string[];
+  list: string[];
 }
 
-const DualList: React.FC<Props> = ({ title, children }) => {
-  const sorted = children.sort((a, b) => a.localeCompare(b));
+const DualList: React.FC<Props> = ({ title, list }) => {
+  const sorted = list.sort((a, b) => a.localeCompare(b));
   const len = sorted.length;
   const half = Math.ceil(len / 2);
   const list1 = sorted.slice(0, half);

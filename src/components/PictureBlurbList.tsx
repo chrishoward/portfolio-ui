@@ -1,14 +1,16 @@
 import React from "react";
+
+import { IPictureBlurbList } from "../types";
 import PictureBlurb from "./PictureBlurb";
 
 interface Props {
-  data: any;
+  data: IPictureBlurbList[];
 }
 
 const PictureBlurbList: React.FC<Props> = ({ data }) => {
   return (
     <>
-      {data.map((d: any) => (
+      {data.map((d: IPictureBlurbList) => (
         <PictureBlurb
           key={d.title}
           src={d.img}

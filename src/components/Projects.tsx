@@ -8,10 +8,11 @@ import CardContent from "./CardContent";
 import Button from "./Button";
 import Blurb from "./Blurb";
 import DualList from "./DualList";
+import { IProject } from "../types";
 import "../styles/Projects.css";
 
 interface Props {
-  data: any;
+  data: IProject[];
 }
 
 const lists = [
@@ -26,7 +27,7 @@ const isPrivate = (str: string) => str === "private";
 const Projects: React.FC<Props> = ({ data }) => {
   return (
     <Grid>
-      {data.map((p: any) => (
+      {data.map((p: IProject) => (
         <Card key={p.title} className="Project__card">
           <Picture className="Project__picture" src={p.img} alt={p.title} />
           <CardContent>
@@ -34,11 +35,9 @@ const Projects: React.FC<Props> = ({ data }) => {
               {p.description}
             </Blurb>
             {lists
-              .filter(({ title, key }) => p[key].length > 0)
+              .filter(({ title, key }) => (p[key] as string[]).length > 0)
               .map(({ title, key }) => (
-                <DualList key={title} title={title}>
-                  {p[key]}
-                </DualList>
+                <DualList key={title} title={title} list={p[key] as string[]} />
               ))}
           </CardContent>
           <div className="Project__filler" />
@@ -49,15 +48,16 @@ const Projects: React.FC<Props> = ({ data }) => {
                 "Projects__button--left": i === 0,
               });
               const key = str.toLowerCase();
+              const val = p[key] as string;
               return (
                 <Button
                   key={str}
                   className={classes}
-                  href={p[key]}
-                  disabled={isPrivate(p[key])}
+                  href={val}
+                  disabled={isPrivate(val)}
                   hover
                 >
-                  {`${str}${isPrivate(p[key]) ? " (Private)" : ""}`}
+                  {`${str}${isPrivate(val) ? " (Private)" : ""}`}
                 </Button>
               );
             })}

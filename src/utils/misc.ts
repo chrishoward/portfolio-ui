@@ -1,5 +1,7 @@
+// Viewport breakpoint from desktop to mobile/tablet in px
 export const breakpoint = 959;
 
+// Scroll behaviour when clicking nav links
 export const scrollWithOffset = (el: HTMLElement) => {
   setTimeout(() => {
     const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;

@@ -2,10 +2,11 @@ import React from "react";
 
 import Picture from "./Picture";
 import PictureStrip from "./PictureStrip";
+import { ICommunity } from "../types";
 import "../styles/Community.css";
 
 interface Props {
-  data: any;
+  data: ICommunity[];
 }
 
 const Community: React.FC<Props> = ({ data }) => {
@@ -16,7 +17,7 @@ const Community: React.FC<Props> = ({ data }) => {
         like-minded developers and learn new things.
       </p>
       <PictureStrip>
-        {data.map((d: any) => (
+        {data.map((d: ICommunity) => (
           <Picture
             key={d.img}
             className="Community__picture"
