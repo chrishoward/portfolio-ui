@@ -1,3 +1,6 @@
+ARG REACT_APP_API_HOST
+ARG REACT_APP_API_PORT
+
 # Builder stage
 FROM node:14-alpine AS builder
 
