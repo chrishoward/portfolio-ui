@@ -1,8 +1,9 @@
-ARG REACT_APP_API_HOST
-ARG REACT_APP_API_PORT
-
 # Builder stage
 FROM node:14-alpine AS builder
+
+# Environment variables to be injected during Create-React-App build
+ARG REACT_APP_API_HOST
+ARG REACT_APP_API_PORT
 
 # Use /app as the CWD
 WORKDIR /app
