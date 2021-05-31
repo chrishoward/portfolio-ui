@@ -1,3 +1,3 @@
-Portfolio website, showcasing my work and experience as a Software Developer.
+User interface / web server config for portfolio website
 
-This single page application incorporates a server-side API and database, all deployed as Docker containers. This wasn't necessary given the simplicity of the app but was done for demonstration purposes and practice using Docker.
+For details about this project see projects at www.chrishoward.com.au
