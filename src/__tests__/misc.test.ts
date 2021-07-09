@@ -1,7 +1,7 @@
 import { rest } from "msw";
 import { setupServer } from "msw/node";
 
-import { fetchAsJson } from "../misc";
+import { fetchAsJson } from "../utils/misc";
 
 // Mock API server
 const server = setupServer();
