@@ -17,7 +17,7 @@ import Testimonials from "./components/Testimonials";
 import Community from "./components/Community";
 import Contact from "./components/Contact";
 import Banner from "./components/Banner";
-import { scrollWithOffset, breakpoint } from "./utils/misc";
+import { scrollWithOffset, breakpoint, fetchAsJson } from "./utils/misc";
 import "./App.css";
 
 const sections = [
@@ -64,8 +64,7 @@ const App: React.FC<{}> = () => {
   useEffect(() => {
     async function getData() {
       const apiUrl = `https://${process.env.REACT_APP_API_HOST}:${process.env.REACT_APP_API_PORT}/`;
-      const response = await fetch(apiUrl);
-      const appData = await response.json();
+      const appData = await fetchAsJson(apiUrl);
       setData(appData);
     }
     getData();
