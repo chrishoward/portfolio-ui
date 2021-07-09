@@ -63,7 +63,10 @@ const App: React.FC<{}> = () => {
 
   useEffect(() => {
     async function getData() {
-      const apiUrl = `https://${process.env.REACT_APP_API_HOST}:${process.env.REACT_APP_API_PORT}/`;
+      const apiUrl = `http${
+        process.env.NODE_ENV === "production" ? "s" : ""
+      }://${process.env.REACT_APP_API_HOST}:${process.env.REACT_APP_API_PORT}/`;
+      console.log("apiUrl: ", apiUrl);
       const appData = await fetchAsJson(apiUrl);
       setData(appData);
     }
