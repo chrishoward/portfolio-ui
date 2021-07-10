@@ -1,11 +1,11 @@
 import { render, screen } from "@testing-library/react";
 
-import Toolbar from "../components/Toolbar";
+import PageBackground from "../components/PageBackground";
 
 it("displays all children props", () => {
   const arr = [1, 2, 3];
   const children = arr.map((num) => <div key={num}>{num}</div>);
-  render(<Toolbar>{children}</Toolbar>);
+  render(<PageBackground>{children}</PageBackground>);
 
   arr.forEach((c) => {
     const child = screen.getByText(c.toString());
@@ -16,7 +16,7 @@ it("displays all children props", () => {
 it("correctly applies the className prop", () => {
   const testClassName = "test";
   const text = "foo";
-  render(<Toolbar className={testClassName}>{text}</Toolbar>);
+  render(<PageBackground className={testClassName}>{text}</PageBackground>);
 
   const el = screen.getByText(text);
   expect(el).toHaveClass(testClassName);

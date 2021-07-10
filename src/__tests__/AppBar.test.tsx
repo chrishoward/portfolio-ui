@@ -14,8 +14,8 @@ it("displays all children props", () => {
 });
 
 it("correctly applies the className prop", () => {
-  const testClassName = "Test";
-  const text = "Foo";
+  const testClassName = "test";
+  const text = "foo";
   render(<AppBar className={testClassName}>{text}</AppBar>);
 
   const el = screen.getByText(text);
