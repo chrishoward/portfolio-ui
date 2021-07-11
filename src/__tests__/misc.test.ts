@@ -9,8 +9,7 @@ beforeAll(() => server.listen());
 afterEach(() => server.resetHandlers());
 afterAll(() => server.close());
 
-test("fetchAsJson() takes a url argument and returns json", async () => {
-  // Arrange
+test("fetchAsJson() takes a url argument, fetches and returns json", async () => {
   const url = "/test";
   const mockData = JSON.stringify({
     obj: {
@@ -25,10 +24,8 @@ test("fetchAsJson() takes a url argument and returns json", async () => {
     })
   );
 
-  // Act
   const json = await fetchAsJson(url);
 
-  // Assert
   expect(json.obj.foo).toBe("bar");
   expect(json.arr[0]).toBe(1);
 });
