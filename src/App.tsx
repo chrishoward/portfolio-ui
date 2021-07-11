@@ -59,12 +59,18 @@ const sections = [
 const App: React.FC<{}> = () => {
   const { width } = useWindowSize();
   const isMobile = width < breakpoint;
-  const [data, setData] = useState<object | null>(null);
+  const [state, setState] = useState({
+    loading: true,
+    data: null,
+    error: null,
+  });
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
-    const data = api.getPortfolioData();
-    setData(data);
+    api.getPortfolioData().then(
+      (data) => setState({ loading: false, data, error: null }),
+      (error) => setState({ loading: false, data: null, error })
+    );
   }, []);
 
   const navButtons = sections.map((n) => (
@@ -80,38 +86,56 @@ const App: React.FC<{}> = () => {
     </HashLink>
   ));
 
-  if (!data) {
-    return <p>Loading...</p>;
+  const { loading, data, error } = state;
+
+  if (loading) {
   }
 
   return (
-    <PageBackground className="App__background">
-      <Page marginTopBottom>
-        <Banner src="/images/banner.svg" />
-        <AppBar dropShadow>
-          {isMobile ? (
-            <Button hover fullWidth onClick={() => setIsMenuOpen(!isMenuOpen)}>
-              Menu
-            </Button>
-          ) : (
-            <Toolbar className="Toolbar--height-100pc">{navButtons}</Toolbar>
-          )}
-        </AppBar>
-        {isMenuOpen && <Menu>{navButtons}</Menu>}
-        <PageContent dropShadow>
-          {sections.map(
-            ({ id, title, dataKey, component: Component }, i, arr) => {
-              const last = i + 1 === arr.length;
-              return (
-                <Section key={id} id={id} title={title} separator={!last}>
-                  <Component data={(data as any)[dataKey]} />
-                </Section>
-              );
-            }
-          )}
-        </PageContent>
-      </Page>
-    </PageBackground>
+    <>
+      <div role="alert">
+        {loading
+          ? "Loading..."
+          : error
+          ? `Something went wrong. Let Chris know (hi@chrishoward.com.au) with error: ${error}`
+          : null}
+      </div>
+      {data && (
+        <PageBackground className="App__background">
+          <Page marginTopBottom>
+            <Banner src="/images/banner.svg" />
+            <AppBar dropShadow>
+              {isMobile ? (
+                <Button
+                  hover
+                  fullWidth
+                  onClick={() => setIsMenuOpen(!isMenuOpen)}
+                >
+                  Menu
+                </Button>
+              ) : (
+                <Toolbar className="Toolbar--height-100pc">
+                  {navButtons}
+                </Toolbar>
+              )}
+            </AppBar>
+            {isMenuOpen && <Menu>{navButtons}</Menu>}
+            <PageContent dropShadow>
+              {sections.map(
+                ({ id, title, dataKey, component: Component }, i, arr) => {
+                  const last = i + 1 === arr.length;
+                  return (
+                    <Section key={id} id={id} title={title} separator={!last}>
+                      <Component data={(data as any)[dataKey]} />
+                    </Section>
+                  );
+                }
+              )}
+            </PageContent>
+          </Page>
+        </PageBackground>
+      )}
+    </>
   );
 };
 
