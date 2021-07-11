@@ -17,7 +17,8 @@ import Testimonials from "./components/Testimonials";
 import Community from "./components/Community";
 import Contact from "./components/Contact";
 import Banner from "./components/Banner";
-import { scrollWithOffset, breakpoint, fetchAsJson } from "./utils/misc";
+import * as api from "./api";
+import { scrollWithOffset, breakpoint } from "./utils/misc";
 import "./App.css";
 
 const sections = [
@@ -62,15 +63,8 @@ const App: React.FC<{}> = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
-    async function getData() {
-      const apiUrl = `http${
-        process.env.NODE_ENV === "production" ? "s" : ""
-      }://${process.env.REACT_APP_API_HOST}:${process.env.REACT_APP_API_PORT}/`;
-      console.log("apiUrl: ", apiUrl);
-      const appData = await fetchAsJson(apiUrl);
-      setData(appData);
-    }
-    getData();
+    const data = api.getPortfolioData();
+    setData(data);
   }, []);
 
   const navButtons = sections.map((n) => (

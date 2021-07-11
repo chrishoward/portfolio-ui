@@ -9,8 +9,3 @@ export const scrollWithOffset = (el: HTMLElement) => {
     window.scrollTo({ top: yCoordinate + yOffset, behavior: "smooth" });
   }, 200);
 };
-
-export const fetchAsJson = async (url: string) => {
-  const response = await fetch(url);
-  return await response.json();
-};
