@@ -97,7 +97,7 @@ const App: React.FC<{}> = () => {
         {loading
           ? "Loading..."
           : error
-          ? `Something went wrong. Let Chris know (hi@chrishoward.com.au) with error: ${error}`
+          ? `Something went wrong. If you've got a minute, please let me know (hi@chrishoward.com.au) with error: ${error}`
           : null}
       </div>
       {data && (
