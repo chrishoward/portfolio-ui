@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 
 import Testimonial from "../components/Testimonial";
 
-it("displays children text", () => {
+test("displays children text", () => {
   const text = "test";
   render(
     <Testimonial name="foo" role="bar" company="baz" img="img" url="url">

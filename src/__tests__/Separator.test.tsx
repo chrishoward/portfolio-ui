@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 
 import Separator from "../components/Separator";
 
-it("correctly applies the className prop to Separator container", () => {
+test("correctly applies the className prop to Separator container", () => {
   const testClassName = "test";
   const text = "foo";
   const { container } = render(

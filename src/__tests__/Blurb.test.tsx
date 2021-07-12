@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 
 import Blurb from "../components/Blurb";
 
-it("displays children text", () => {
+test("displays children text", () => {
   const text = "test";
   render(<Blurb title="foo">{text}</Blurb>);
 
@@ -10,7 +10,7 @@ it("displays children text", () => {
   expect(el).toHaveTextContent(text);
 });
 
-it("correctly applies the className prop to Blurb container", () => {
+test("correctly applies the className prop to Blurb container", () => {
   const testClassName = "test";
   const text = "foo";
   const { container } = render(

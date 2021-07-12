@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 
 import Toolbar from "../components/Toolbar";
 
-it("displays all children props", () => {
+test("displays all children props", () => {
   const arr = [1, 2, 3];
   const children = arr.map((num) => <div key={num}>{num}</div>);
   render(<Toolbar>{children}</Toolbar>);
@@ -13,7 +13,7 @@ it("displays all children props", () => {
   });
 });
 
-it("correctly applies the className prop", () => {
+test("correctly applies the className prop", () => {
   const testClassName = "test";
   const text = "foo";
   render(<Toolbar className={testClassName}>{text}</Toolbar>);
