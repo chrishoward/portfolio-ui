@@ -11,7 +11,6 @@ export interface IAboutMe {
 }
 
 export interface IProject {
-  id: number;
   title: string;
   img: string;
   area: string[];
@@ -25,7 +24,6 @@ export interface IProject {
 }
 
 export interface IPictureBlurbList {
-  id: number;
   img: string;
   alt: string;
   link: string;
@@ -34,7 +32,6 @@ export interface IPictureBlurbList {
 }
 
 export interface ITestimonial {
-  id: number;
   name: string;
   company: string;
   role: string;
@@ -44,7 +41,6 @@ export interface ITestimonial {
 }
 
 export interface ICommunity {
-  id: number;
   title: string;
   img: string;
   alt: string;
@@ -52,7 +48,6 @@ export interface ICommunity {
 }
 
 export interface IContact {
-  id: number;
   img: string;
   alt: string;
   title: string;
