@@ -22,17 +22,17 @@ test("aboutme data prop is rendered/applied correctly", () => {
   render(<AboutMe data={data} />);
 
   const image = screen.getByRole("img");
-  expect(image).toHaveAttribute("src", expect.stringContaining("foo"));
-  expect(image).toHaveAttribute("alt", expect.stringContaining("bar"));
+  expect(image).toHaveAttribute("src", expect.stringContaining(data.img));
+  expect(image).toHaveAttribute("alt", expect.stringContaining(data.alt));
 
   const imageLink = image.closest("a");
-  expect(imageLink).toHaveAttribute("href", expect.stringContaining("baz"));
+  expect(imageLink).toHaveAttribute("href", expect.stringContaining(data.link));
 
   const blurbTitles = screen.getAllByRole("heading", { level: 2 });
-  expect(blurbTitles[0]).toHaveTextContent("blurb title 1");
-  expect(blurbTitles[1]).toHaveTextContent("blurb title 2");
+  expect(blurbTitles[0]).toHaveTextContent(data.blurbs[0].title);
+  expect(blurbTitles[1]).toHaveTextContent(data.blurbs[1].title);
 
   const blurbTexts = screen.getAllByRole("paragraph");
-  expect(blurbTexts[0]).toHaveTextContent("blurb text 1");
-  expect(blurbTexts[1]).toHaveTextContent("blurb text 2");
+  expect(blurbTexts[0]).toHaveTextContent(data.blurbs[0].text);
+  expect(blurbTexts[1]).toHaveTextContent(data.blurbs[1].text);
 });
