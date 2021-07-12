@@ -24,7 +24,7 @@ const Blurb: React.FC<Props> = ({ className, title, href, children }) => {
       ) : (
         titleEl
       )}
-      <p>{children}</p>
+      <p role="paragraph">{children}</p>
     </div>
   );
 };
