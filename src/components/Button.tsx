@@ -31,7 +31,7 @@ const Button: React.FC<Props> = ({
     "Button--disabled": disabled,
   });
   const Component = () => (
-    <div id={id} className={classes} onClick={onClick}>
+    <div id={id} className={classes} onClick={onClick} role="button">
       {children}
     </div>
   );
