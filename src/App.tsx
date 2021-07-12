@@ -126,7 +126,7 @@ const App: React.FC<{}> = () => {
                   const last = i + 1 === arr.length;
                   return (
                     <Section key={id} id={id} title={title} separator={!last}>
-                      <Component data={(data as any)[dataKey]} />
+                      <Component data={data![dataKey]} />
                     </Section>
                   );
                 }

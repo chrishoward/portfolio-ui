@@ -59,7 +59,7 @@ export interface IContact {
   link: string;
 }
 
-export interface Data {
+export interface IData {
   aboutMe: IAboutMe;
   projects: IProject[];
   experience: IPictureBlurbList[];
