@@ -1,11 +1,9 @@
-.Banner {
-  font-family: "Permanent Marker", sans-serif;
-  font-weight: 400;
-  text-shadow: 4px 4px rgba(0, 0, 0, 0.15);
-  font-size: 62px;
-  margin-bottom: -8px;
+header {
   z-index: 2;
-  color: white;
+}
+
+.Banner {
+  margin-bottom: -8px;
   pointer-events: none;
   width: 568px;
   max-width: 100%;

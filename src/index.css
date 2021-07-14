@@ -1,19 +1,12 @@
 @import-normalize;
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans");
-@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro");
-@import url("https://fonts.googleapis.com/css2?family=Alex+Brush");
-@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script");
-@import url("https://fonts.googleapis.com/css2?family=Caveat");
-@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker");
-@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P");
-@import url("https://fonts.googleapis.com/css2?family=Rock+Salt");
-@import url("https://fonts.googleapis.com/css2?family=Rubik");
 
 body {
   --theme-primary: #3681d5;
   --theme-secondary: rgba(113, 163, 221, 1);
   --theme-tertiary: rgb(236 244 252);
   --theme-text-primary: #525666;
+  --theme-text-on-primary: #ffffff;
 }
 
 body,

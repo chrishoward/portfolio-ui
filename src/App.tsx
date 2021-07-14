@@ -106,11 +106,7 @@ const App: React.FC<{}> = () => {
             <Banner src="/images/banner.svg" />
             <AppBar dropShadow>
               {isMobile ? (
-                <Button
-                  hover
-                  fullWidth
-                  onClick={() => setIsMenuOpen(!isMenuOpen)}
-                >
+                <Button hover onClick={() => setIsMenuOpen(!isMenuOpen)}>
                   Menu
                 </Button>
               ) : (

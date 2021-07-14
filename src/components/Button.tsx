@@ -25,15 +25,14 @@ const Button: React.FC<Props> = ({
   children,
 }) => {
   const classes = classNames(className, {
-    Button: true,
     "Button--hover": hover,
     "Button--full-width": fullWidth,
     "Button--disabled": disabled,
   });
   const Component = () => (
-    <div id={id} className={classes} onClick={onClick} role="button">
+    <button id={id} className={classes} onClick={onClick}>
       {children}
-    </div>
+    </button>
   );
   return href ? (
     <a
