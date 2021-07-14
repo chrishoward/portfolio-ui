@@ -11,7 +11,7 @@ const Separator: React.FC<Props> = ({ className }) => {
   const classes = classNames(className, { Separator: true });
   const side = <span className="Separator__side" />;
   return (
-    <div className={classes}>
+    <div role="separator" className={classes}>
       {side}
       <span className="Separator__center">{" </> "}</span>
       {side}

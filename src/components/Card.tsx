@@ -10,7 +10,7 @@ interface Props {
 
 const Card: React.FC<Props> = ({ className, children }) => {
   const classes = classNames(className, { Card: true });
-  return <div className={classes}>{children}</div>;
+  return <article className={classes}>{children}</article>;
 };
 
 export default Card;

@@ -21,7 +21,7 @@ const Testimonial: React.FC<Props> = ({
   url,
   children,
 }) => {
-  const nameEl = <h2>{name}</h2>;
+  const nameEl = <span className="Testimonial__name">{name}</span>;
   return (
     <div className="Testimonial">
       <Picture
@@ -42,7 +42,7 @@ const Testimonial: React.FC<Props> = ({
         ) : (
           nameEl
         )}
-        <h3 className="Testimonial__role-company">{`${role}, ${company}`}</h3>
+        <span className="Testimonial__role-company">{`${role}, ${company}`}</span>
       </div>
     </div>
   );

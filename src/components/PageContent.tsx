@@ -13,7 +13,7 @@ const PageContent: React.FC<Props> = ({ dropShadow, children }) => {
     PageContent: true,
     "PageContent--drop-shadow": dropShadow,
   });
-  return <div className={classes}>{children}</div>;
+  return <main className={classes}>{children}</main>;
 };
 
 export default PageContent;
