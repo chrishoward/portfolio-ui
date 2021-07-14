@@ -22,38 +22,55 @@ import { scrollWithOffset, breakpoint } from "./utils/misc";
 import "./App.css";
 
 const sections = [
-  { id: "about-me", title: "About Me", dataKey: "aboutMe", component: AboutMe },
+  {
+    id: "about-me",
+    title: "About Me",
+    dataKey: "aboutMe",
+    component: AboutMe,
+    bodyPadding: true,
+  },
   {
     id: "projects",
     title: "Projects",
     dataKey: "projects",
     component: Projects,
+    bodyPadding: false,
   },
   {
     id: "experience",
     title: "Experience",
     dataKey: "experience",
     component: PictureBlurbList,
+    bodyPadding: true,
   },
   {
     id: "education",
     title: "Education",
     dataKey: "education",
     component: PictureBlurbList,
+    bodyPadding: true,
   },
   {
     id: "testimonials",
     title: "Testimonials",
     dataKey: "testimonials",
     component: Testimonials,
+    bodyPadding: false,
   },
   {
     id: "community",
     title: "Community",
     dataKey: "community",
     component: Community,
+    bodyPadding: true,
   },
-  { id: "contact", title: "Contact", dataKey: "contact", component: Contact },
+  {
+    id: "contact",
+    title: "Contact",
+    dataKey: "contact",
+    component: Contact,
+    bodyPadding: true,
+  },
 ];
 
 const App: React.FC<{}> = () => {
@@ -118,10 +135,20 @@ const App: React.FC<{}> = () => {
             {isMenuOpen && <Menu>{navButtons}</Menu>}
             <PageContent dropShadow>
               {sections.map(
-                ({ id, title, dataKey, component: Component }, i, arr) => {
+                (
+                  { id, title, dataKey, component: Component, bodyPadding },
+                  i,
+                  arr
+                ) => {
                   const last = i + 1 === arr.length;
                   return (
-                    <Section key={id} id={id} title={title} separator={!last}>
+                    <Section
+                      key={id}
+                      id={id}
+                      title={title}
+                      separator={!last}
+                      bodyPadding={bodyPadding}
+                    >
                       <Component data={data![dataKey]} />
                     </Section>
                   );

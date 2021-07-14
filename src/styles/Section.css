@@ -7,8 +7,8 @@
   margin-bottom: 50px;
 }
 
-.Section__body {
-  padding: 0px 24px;
+.Section__body--padding {
+  padding: 0px 8px;
 }
 
 .Section__separator {

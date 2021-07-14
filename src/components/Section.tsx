@@ -8,13 +8,22 @@ interface Props {
   title: string;
   separator?: boolean;
   children: ReactNode;
+  bodyPadding?: boolean;
 }
 
-const Section: React.FC<Props> = ({ id, title, separator, children }) => {
+const Section: React.FC<Props> = ({
+  id,
+  title,
+  separator,
+  children,
+  bodyPadding = false,
+}) => {
   return (
     <section id={id} className="Section">
       <h1 className="Section__title">{title}</h1>
-      <div className="Section__body">{children}</div>
+      <div className={bodyPadding ? "Section__body--padding" : ""}>
+        {children}
+      </div>
       {separator && <Separator className="Section__separator" />}
     </section>
   );
