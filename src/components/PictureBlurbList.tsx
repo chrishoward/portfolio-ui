@@ -1,7 +1,7 @@
 import React from "react";
 
-import { IPictureBlurbList } from "../types";
 import PictureBlurb from "./PictureBlurb";
+import { IPictureBlurbList } from "../types";
 
 interface Props {
   data: IPictureBlurbList[];
