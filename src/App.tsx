@@ -120,7 +120,7 @@ const App: React.FC<{}> = () => {
       {data && (
         <PageBackground className="App__background">
           <Page marginTopBottom>
-            <Banner src="/images/banner.svg" />
+            <Banner src="/images/banner.svg" alt="Chris Howard" />
             <AppBar dropShadow>
               {isMobile ? (
                 <Button hover onClick={() => setIsMenuOpen(!isMenuOpen)}>
