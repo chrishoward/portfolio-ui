@@ -1,0 +1,17 @@
+.ProjectButtons__button-container {
+  display: flex;
+  width: 100%;
+}
+
+.ProjectButtons__button-container a {
+  flex: 1;
+}
+
+.ProjectButtons__button {
+  flex: 1;
+  border-radius: 0px 0px 0px 0px;
+}
+
+.ProjectButtons__button--left {
+  border-right: 2px solid white;
+}

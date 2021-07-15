@@ -1,0 +1,16 @@
+.Project__card {
+  display: flex;
+  flex-direction: column;
+}
+
+.Project__picture {
+  border-bottom: 1px solid lightgrey;
+}
+
+.Project__filler {
+  flex: 1;
+}
+
+.Project__blurb {
+  margin-bottom: 8px;
+}
